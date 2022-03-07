@@ -5,7 +5,9 @@
 (define file-list (string-split file-string #px"[\\s]+"))
 
 (define (expr list-number)
-  (print list-number))
+  (define list-item (list-ref file-list list-number))
+  (regexp-match-exact? #px"[A-z]+" list-item)
+  (regexp-match-exact? #px"\\(" ))
 
 (define (stmt list-number)
   (define list-item (list-ref file-list list-number))
